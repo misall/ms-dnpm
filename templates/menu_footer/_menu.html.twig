@@ -1,0 +1,39 @@
+<!-- ======= Header ======= -->
+<header id="header" class="d-flex align-items-center mb-n3">
+    <div class="container d-flex align-items-center">
+
+        <div class="logo mr-auto">
+            <h1 class="text-light"><a href="#"><span>DNPM</span></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+        </div>
+
+        <nav class="nav-menu d-none d-lg-block">
+            <ul>
+                <li class="{% if current_menu == 'home' %}active{% endif %}"><a href="{{ path('index_home') }}">Acceuil</a></li>
+                <li class="{% if current_menu == 'about' %}active{% endif %}"><a href="{{ path('index_apropos') }}">Apropos</a></li>
+                <li class="drop-down"><a href="">Ressources</a>
+                    <ul>
+                        <li><a href="#">Politique Pharmaceutique</a></li>
+                        <li class="drop-down"><a href="#">Manuel</a>
+                            <ul>
+                                <li><a href="#">Procedure SIGL</a></li>
+                                <li><a href="#">Equipes IMPACT</a></li>
+                                <li><a href="#">Importation des produits</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Liste Natinales des Medicaments</a></li>
+                    </ul>
+                </li>
+                <li class="{% if current_menu == 'services' %}active{% endif %}"><a href="{{ path('index_services') }}">Services</a></li>
+                <li class="{% if current_menu == 'activites' %}active{% endif %}"><a href="{{ path('index_activites') }}">Activites</a></li>
+                <li class="{% if current_menu == 'realisations' %}active{% endif %}"><a href="{{ path('index_realisations') }}">Realisation</a></li>
+                <li class="{% if current_menu == 'contact' %}active{% endif %}"><a href="{{ path('index_contact') }}">Contact</a></li>
+                <li class="{% if current_menu == 'contact' %}active{% endif %}"><a target="_blank" href="https://www.esigl.sante.gov.gn">eSIGL</a></li>
+                <li class="{% if current_menu == 'connexion' %}active{% endif %}"><a href="{{ path('app_login') }}">Connexion</a></li>
+
+            </ul>
+        </nav><!-- .nav-menu -->
+
+    </div>
+</header><!-- End Header -->

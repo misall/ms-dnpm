@@ -2,11 +2,17 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="descriptison">
+        <meta content="" name="keywords">
+
+        <title>{% block title %}MS-DNPM | Direction Nationale de Pharmacie et du Medicament{% endblock %}</title>
+        {% block stylesheets %}{{ encore_entry_link_tags('app') }}{% endblock %}
     </head>
     <body>
+        {% block menu %}{{ include('menu_footer/_menu.html.twig') }}{% endblock %}
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        {% block footer %}{{ include('menu_footer/footer.html.twig') }}{% endblock %}
+        {% block javascripts %}{{ encore_entry_script_tags('app') }}{% endblock %}
     </body>
 </html>

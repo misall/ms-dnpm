@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block title %}Activites de la DNPM{% endblock %}
+
+{% block body %}
+    <div class="container mt-5 mb-5">
+        <div class="jumbotron text-success mt-5 shadow-lg" style="height: 300px">
+            <h1 class="h1 text-center text-justify mt-5 text-uppercase">Nos Activites</h1>
+        </div>
+        <hr>
+
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    {% for activite in activites %}
+                    <div class="col-md-4">
+                        <div class="card mb-4 shadow-sm">
+                            <svg class="bd-placeholder-img card-img-top" width="100%" height="225" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img" aria-label="Placeholder: Thumbnail"><title>Placeholder</title><rect width="100%" height="100%" fill="#55595c"/><text x="50%" y="50%" fill="#eceeef" dy=".3em">Thumbnail</text></svg>
+                            <div class="card-title text-center font-weight-bold mb-n4 mt-3">
+                                {{ activite.title }}
+                            </div>
+                            <div class="card-body">
+                                <p class="card-text">{{ activite.description | markdown }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                        <button type="button" class="btn btn-sm btn-outline-primary">Voir les details</button>
+                                    <small class="text-muted">{{ activite.startedAt | ago }}</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

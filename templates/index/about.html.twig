@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+{% block title %}Apropos de la DNPM{% endblock %}
+
+{% block body %}
+    <div class="container mt-3">
+        <div class="jumbotron text-success mt-5 shadow-lg" style="height: 300px">
+            <h1 class="h1 text-center text-justify mt-5 text-uppercase">Apropos de la DNPM</h1>
+        </div>
+        <hr>
+        <div class="row mt-3 mb-5">
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 600px; height: auto">
+                    <div class="row no-gutters">
+                        <img src="{{ presentation.image }}" class="card-img shadow-lg" alt="image_presentation">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{ presentation.title }}</h2>
+                    <p class="card-text">{{ presentation.description | markdown}}</p>
+                </div>
+            </div>
+        </div>
+
+        <hr>
+{#        <h2 class="h2 text-center">{{ mission.title }}</h2>#}
+        <div class="row mt-5 mb-5" style="background-color: #fefefe">
+            <div class="col-6">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{ mission.title }}</h2>
+                    <p class="card-text">{{ mission.description | markdown}}</p>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 600px; height: 600px">
+                    <div class="row no-gutters">
+                        <img src="{{ mission.image }}" class="card-img shadow-lg" alt="image_presentation">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+        <div class="row mt-5 mb-5">
+            <div class="col-6">
+                <div class="card mb-3" style="max-width: 600px; height: auto">
+                    <div class="row no-gutters">
+                        <img src="{{ mot_du_directeur.image }}" class="card-img shadow-lg" alt="image_presentation">
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card-body">
+                    <h2 class="card-title text-center">{{ mot_du_directeur.title }}</h2>
+                    <p class="card-text">{{ mot_du_directeur.description | markdown}}</p>
+                </div>
+            </div>
+        </div>
+        <hr>
+
+       <h2 class="h2 text-center mt-5 mb-5 p-5"> {{ organigramme.title }}</h2>
+
+    </div>
+
+{% endblock %}

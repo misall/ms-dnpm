@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Services de la DNPM{% endblock %}
+
+{% block body %}
+    <div class="container mt-5 mb-5">
+        <div class="jumbotron text-success mt-5 shadow-lg" style="height: 300px">
+            <h1 class="h1 text-center text-justify mt-5 text-uppercase">Nos Services</h1>
+        </div>
+        <hr>
+
+        <div class="row row-cols-1 row-cols-md-2">
+            {% for service in services %}
+                <div class="col mb-4">
+                    <div class="card shadow-lg">
+                        <img src="{{ service.image }}" class="card-img-top" alt="service_image">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">{{ service.title }}</h5>
+                            <div class="card-footer mb-0">
+                                <div class="d-flex justify-content-end">
+                                    <a href="#" class="btn btn-outline-success shadow">En Savoir plus</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+
+        </div>
+
+    </div>
+{% endblock %}
+
+
