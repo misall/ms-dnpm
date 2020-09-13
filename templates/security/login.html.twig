@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}DNPM | Connexion{% endblock %}
 {% block stylesheets %}
     {{ parent() }}
     {{ encore_entry_link_tags('login_style') }}
@@ -9,10 +9,11 @@
 {% block body %}
 
     <body class="text-center">
-    <form method="post" class="form-signin mt-3">
-        <img class="mb-4"
-             src="{{ asset('/armoirie-GN.svg') }}"
-             alt="" width="256" height="256">
+
+        <form method="post" class="form-signin mt-3">
+            <img class="mb-4"
+                 src="{{ asset('/armoirie-GN.svg') }}"
+                 alt="" width="256" height="256">
 
             {% if error %}
                 <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
@@ -28,7 +29,7 @@
             {% endif %}
 
 
-            <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+            <h1 class="h3 mb-3 text-success font-weight-normal">Connectez-vous</h1>
             <label for="inputEmail" class="sr-only">Email</label>
 
             <input type="email" placeholder="Email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" required autofocus>
@@ -37,19 +38,20 @@
 
             <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
 
-        {#
-        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-        See https://symfony.com/doc/current/security/remember_me.html
+            {#
+            Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
+            See https://symfony.com/doc/current/security/remember_me.html
 
-        <div class="checkbox mb-3">
-            <label>
-                <input type="checkbox" name="_remember_me"> Remember me
-            </label>
-        </div>
-        #}
+            <div class="checkbox mb-3">
+                <label>
+                    <input type="checkbox" name="_remember_me"> Remember me
+                </label>
+            </div>
+            #}
 
-            <button class="btn btn-lg btn-outline-success" type="submit">Se connecter</button>
-                <p class="mt-5 mb-3 text-muted">&copy; Copyright DNPM. <br> All Rights Reserved</p>
-    </form>
+            <button class="btn btn-lg btn-block btn-outline-success" type="submit">Se connecter</button>
+            <p class="mt-5 mb-3 text-muted">&copy; Copyright DNPM. <br> All Rights Reserved</p>
+        </form>
+
     </body>
 {% endblock %}

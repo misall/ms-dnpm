@@ -1,23 +1,33 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Register{% endblock %}
+{% block title %}DNPM | Ajout utilisateur{% endblock %}
 
 {% block body %}
-    <br><br><br><br>
-    {% for flashError in app.flashes('verify_email_error') %}
-        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
-    {% endfor %}
+<div class="container">
+        <form class="mb-5 mt-3" method="post">
+            <div class="row p-3">
+                <div class="col-1"></div>
+                <div class="col-10 p-5 shadow-lg bg-light">
+                    <h1 class="h1 text-success text-center mt-3">Creation de compte utilisateur</h1>
+                    {{ form_start(registrationForm) }}
 
-    <h1>Register</h1>
+                    {{ form_row(registrationForm.firstName) }}
 
-    {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.position) }}
-        {{ form_row(registrationForm.plainPassword, {
-            label: 'Password'
-        }) }}
-        {{ form_row(registrationForm.agreeTerms) }}
+                    {{ form_row(registrationForm.lastName) }}
 
-        <button type="submit" class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+                    {{ form_row(registrationForm.position) }}
+
+                    {{ form_row(registrationForm.email) }}
+
+                    {{ form_row(registrationForm.plainPassword) }}
+
+                    {{ form_row(registrationForm.agreeTerms) }}
+
+                    <button type="submit" class="btn btn-block btn-lg btn-outline-success">Creation de compte</button>
+                    {{ form_end(registrationForm) }}
+                </div>
+                <div class="col-1"></div>
+            </div>
+        </form>
+</div>
 {% endblock %}
