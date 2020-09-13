@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\User;
 use App\Form\RegistrationFormType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,6 +15,7 @@ class RegistrationController extends AbstractController
 {
     /**
      * @Route("/register", name="app_register")
+     * @IsGranted("ROLE_ADMIN")
      */
     public function register(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
     {
