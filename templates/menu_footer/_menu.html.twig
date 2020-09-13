@@ -30,7 +30,12 @@
                 <li class="{% if current_menu == 'realisations' %}active{% endif %}"><a href="{{ path('index_realisations') }}">Realisation</a></li>
                 <li class="{% if current_menu == 'contact' %}active{% endif %}"><a href="{{ path('index_contact') }}">Contact</a></li>
                 <li class="{% if current_menu == 'contact' %}active{% endif %}"><a target="_blank" href="https://www.esigl.sante.gov.gn">eSIGL</a></li>
-                <li class="{% if current_menu == 'connexion' %}active{% endif %}"><a href="{{ path('app_login') }}">Connexion</a></li>
+                {% if app.user %}
+                    <li class="{% if current_menu == 'connexion' %}active{% endif %}"><a href="{{ path('admin') }}">Administration</a></li>
+                    {% else %}
+                        <li class="{% if current_menu == 'connexion' %}active{% endif %}"><a href="{{ path('app_login') }}">Connexion</a></li>
+                {% endif %}
+
 
             </ul>
         </nav><!-- .nav-menu -->

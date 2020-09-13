@@ -6,6 +6,7 @@ use App\Entity\About;
 use App\Entity\Activites;
 use App\Entity\Officines;
 use App\Entity\Partenaires;
+use App\Entity\Produits;
 use App\Entity\Services;
 use App\Entity\User;
 use EasyCorp\Bundle\EasyAdminBundle\Config\Dashboard;
@@ -42,7 +43,8 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::linkToCrud('Partenaires', 'fa fa-handshake', Partenaires::class );
 
         yield MenuItem::section('Gestion des officines');
-        yield MenuItem::linkToCrud('Liste des officines', 'fa fa-ambulance', Officines::class);
+        yield MenuItem::linkToCrud('Liste des officines', 'fa fa-medkit', Officines::class);
+        yield MenuItem::linkToCrud('Liste des produits', 'fa fa fa-file-text-o', Produits::class);
         yield MenuItem::section('Gestion des grossistes');
 
         yield MenuItem::section('Gestion des grossistes');
