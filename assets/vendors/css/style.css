@@ -610,7 +610,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 .section-title h2 {
@@ -897,16 +897,16 @@ section {
 }
 
 .features .icon-box h3 a {
-  color: #010483;
+  color: #000000;;
   transition: ease-in-out 0.3s;
 }
 
 .features .icon-box h3 a:hover {
-  color: #01036f;
+  color: #000000;;
 }
 
 .features .icon-box:hover {
-  background: #ebebff;
+  background: #d5d5d9;
 }
 
 /*--------------------------------------------------------------
@@ -1156,7 +1156,7 @@ section {
   display: block;
   width: 50px;
   height: 1px;
-  background: #0d12fc;
+  background: #0bf50f;
   bottom: 0;
   left: calc(50% - 25px);
 }
@@ -1165,7 +1165,7 @@ section {
   font-style: italic;
   display: block;
   font-size: 13px;
-  color: #01036f;
+  color: #086f01;
 }
 
 .team .member .social {
@@ -1174,7 +1174,7 @@ section {
 
 .team .member .social a {
   transition: color 0.3s;
-  color: #01036f;
+  color: #016f03;
 }
 
 .team .member .social a:hover {

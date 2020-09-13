@@ -4,6 +4,7 @@ namespace App\Controller\Admin;
 
 use App\Entity\About;
 use App\Entity\Activites;
+use App\Entity\Faq;
 use App\Entity\Officines;
 use App\Entity\Partenaires;
 use App\Entity\Produits;
@@ -38,6 +39,7 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::section('Gestion du siteweb');
         yield MenuItem::linkToCrud('Apropos', 'fa fa-info', About::class);
         yield MenuItem::linktoDashboard('Ressources', 'fa fa-rocket');
+        yield MenuItem::linkToCrud('FAQ', 'fa fa-question', Faq::class);
         yield MenuItem::linkToCrud('Services', 'fa fa-briefcase', Services::class );
         yield MenuItem::linkToCrud('Activites', 'fa fa-check-square-o', Activites::class );
         yield MenuItem::linkToCrud('Partenaires', 'fa fa-handshake', Partenaires::class );

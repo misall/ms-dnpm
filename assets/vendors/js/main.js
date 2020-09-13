@@ -164,7 +164,6 @@
   $(".owl-carousel").owlCarousel({
     autoplay: true,
     dots: true,
-    nav: true,
     loop: true,
     items: 1
   });

@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Repository\AboutRepository;
 use App\Repository\ActivitesRepository;
+use App\Repository\FaqRepository;
 use App\Repository\ServicesRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,10 +15,25 @@ class IndexController extends AbstractController
     /**
      * @Route("/", name="index_home")
      */
-    public function index()
+    public function index
+        (
+            AboutRepository $aboutRepository,
+            ServicesRepository $servicesRepository,
+            ActivitesRepository $activitesRepository,
+            FaqRepository $faqRepository
+        )
     {
         return $this->render('index/index.html.twig', [
-            'current_menu' => 'home'
+            'current_menu' => 'home',
+            'about' => $aboutRepository->findOneBy(['title' => 'Presentation']),
+            'services' => $servicesRepository->findAll(),
+            'first_service' => $servicesRepository->findOneBy(['id' => [4]]),
+            'second_service' => $servicesRepository->findOneBy(['id' => [9]]),
+            'third_service' => $servicesRepository->findOneBy(['id' => [8]]),
+            'fifth_service' => $servicesRepository->findOneBy(['id' => [7]]),
+            'activites' => $activitesRepository->findAll(),
+            'faq' => $faqRepository->findAll()
+
         ]);
     }
 
