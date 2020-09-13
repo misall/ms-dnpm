@@ -3,30 +3,76 @@
 {% block page_title 'DNPM Administration' %}
 
 {#{% block page_title 'Bienvenue dans l\'espace d\'administration de la DNPM' %}#}
+{% block content_title %}{% endblock %}
 
 {% block page_content %}
     <div class="row">
         <div class="col-3">
-            <div class="jumbotron bg-primary">
-
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="jumbotron bg-info">
-
-            </div>
-        </div>
-        <div class="col-3">
-            <div class="jumbotron bg-warning">
-
+            <div class="alert alert-success bg-success rounded-lg shadow-lg">
+                <div class="mb-3">
+                    <h4 class="h4 text-center text-white">Total officine</h4>
+                </div>
+                <h5 class="text-white text-center mt-3">1200</h5>
             </div>
         </div>
 
         <div class="col-3">
-            <div class="jumbotron bg-danger">
+            <div class="alert alert-success bg-success rounded-lg shadow-lg">
+                <div class="mb-3">
+                    <h4 class="h4 text-center text-white">Total produit</h4>
+                </div>
+                <h5 class="text-white text-center mt-3">800</h5>
+            </div>
+        </div>
 
+        <div class="col-3">
+            <div class="alert alert-success bg-success rounded-lg shadow-lg">
+                <div class="mb-3">
+                    <h4 class="h4 text-center text-white">Total activites</h4>
+                </div>
+                <h5 class="text-white text-center mt-3">35</h5>
+            </div>
+        </div>
+
+        <div class="col-3">
+            <div class="alert alert-success bg-success rounded-lg shadow-lg">
+                <div class="mb-3">
+                    <h4 class="h4 text-center text-white">Total partenaire</h4>
+                </div>
+                <h5 class="text-white text-center mt-3">8</h5>
             </div>
         </div>
     </div>
+
+    <table class="table table-hover mt-5 mb-5">
+        <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First</th>
+            <th scope="col">Last</th>
+            <th scope="col">Handle</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+        </tr>
+        </tbody>
+    </table>
 
 {% endblock %}
