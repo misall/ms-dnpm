@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{ activity.title }}{% endblock %}
+
+{% block body %}
+    <div class="container-fluid mt-4">
+        <div class="d-flex ml-3 mr-3 justify-content-center mb-5">
+            <img src="{{ activity.image }}" width="100%" height="800px" alt="{{ activity.title }}-image">
+        </div>
+
+        <h2 class="text-center text-success mb-5">{{ activity.title }}</h2>
+
+        <div class="row ml-3 mr-3 mb-5">
+            <div class="col-6">
+                <h2 class="mt-3">Resume de l'activite</h2>
+                <p>
+                    {{ activity.description | raw }}
+                </p>
+            </div>
+            <div class="col-6">
+                <table class="table table-hover table-responsive-lg">
+                    <tbody>
+                    <tr>
+                        <th scope="row">Lieu</th>
+                        <td>{{ activity.lieu }}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Date debut</th>
+                        <td>{{ activity.startedAt | date('d/m/Y') }}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Date fin</th>
+                        <td>{{ activity.endAt | date('d/m/Y') }}</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Financement</th>
+                        <td>PTF</td>
+                    </tr>
+
+                    <tr>
+                        <th scope="row">Nombre de participant</th>
+                        <td>22</td>
+                    </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

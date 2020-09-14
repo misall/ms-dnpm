@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}DNPM | {{ service_info.title }}{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <div class="row mb-5">
+        <div class="col-7">
+            <img src="{{ service_info.image }}" class="img-fluid rounded shadow" alt="service_img">
+        </div>
+        <div class="col-5">
+            <h3 class="text-success mt-4">{{ service_info.title }}</h3>
+            <p class="text-justify">{{ service_info.description | raw }}</p>
+        </div>
+    </div>
+    <hr>
+    <div class="mb-5">
+        <h2 class="text-center mt-5 mb-5">Une equipe dynamique pour vous servir</h2>
+        <div class="row">
+            <div class="col-4">
+                <img src="{{ service_info.image }}" class="rounded-circle ml-4"  height="300px" width="300px" alt="img_perso">
+                <div class="text-center ml-3 font-weight-bold">
+                    <p>Nom et prenom ou email</p>
+                    <p class="font-italic">fonction dans le service</p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img src="{{ service_info.image }}" class="rounded-circle ml-4"  height="300px" width="300px" alt="img_perso">
+                <div class="text-center ml-3 font-weight-bold">
+                    <p>Nom et prenom ou email</p>
+                    <p class="font-italic">fonction dans le service</p>
+                </div>
+            </div>
+
+            <div class="col-4">
+                <img src="{{ service_info.image }}" class="rounded-circle ml-4"  height="300px" width="300px" alt="img_perso">
+               <div class="text-center ml-3 font-weight-bold">
+                   <p>Nom et prenom ou email</p>
+                   <p class="font-italic">fonction dans le service</p>
+               </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+{% endblock %}
+
+
+
