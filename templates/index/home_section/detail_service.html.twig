@@ -9,7 +9,7 @@
             <div class="col-md-8 pt-4">
                 <h3 class="text-success">{{ first_service.title }}</h3>
                 <p class="font-italic text-justify">
-                    {{ first_service.description | markdown }}
+                    {{ first_service.description | raw }}
                 </p>
             </div>
         </div>
@@ -21,7 +21,7 @@
             <div class="col-md-8 pt-5 order-2 order-md-1" >
                 <h3 class="text-success">{{ second_service.title }}</h3>
                 <p class="font-italic">
-                   {{ second_service.description | markdown }}
+                   {{ second_service.description | raw }}
                 </p>
             </div>
         </div>
@@ -33,7 +33,7 @@
             <div class="col-md-8 pt-5">
                 <h3 class="text-success">{{ third_service.title }}</h3>
                 <p>
-                    {{ third_service.description | markdown}}
+                    {{ third_service.description | raw}}
                 </p>
 
             </div>
@@ -46,7 +46,7 @@
             <div class="col-md-8 pt-5 order-2 order-md-1">
                 <h3 class="text-success">{{ fifth_service.title }}</h3>
                 <p class="font-italic">
-                    {{ fifth_service.description | markdown }}
+                    {{ fifth_service.description | raw }}
                 </p>
             </div>
         </div>

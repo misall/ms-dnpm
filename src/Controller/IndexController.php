@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Entity\Activites;
 use App\Repository\AboutRepository;
 use App\Repository\ActivitesRepository;
 use App\Repository\FaqRepository;
@@ -67,6 +68,18 @@ class IndexController extends AbstractController
 
     /**
      * @return Response
+     * @Route ("/service/{id}", name="show_service.html.twig")
+     */
+    public function service_detail($id, ServicesRepository $servicesRepository)
+    {
+        return $this->render('activity/show_service.html.twig', [
+            'current_menu' => 'service_info',
+            'service_info' => $servicesRepository->find($id)
+        ]);
+    }
+
+    /**
+     * @return Response
      * @Route("/activites", name="index_activites")
      */
     public function activites(ActivitesRepository $activitesRepository): Response
@@ -74,6 +87,18 @@ class IndexController extends AbstractController
         return $this->render('index/activites.html.twig', [
             'current_menu' => 'activites',
             'activites' => $activitesRepository->findBy(['status' => 'false'])
+        ]);
+    }
+
+    /**
+     * @return Response
+     * @Route("/activite/{id}", name="show_activity")
+     */
+    public function show_activity($id, ActivitesRepository $activitesRepository)
+    {
+        return $this->render('activity/show.html.twig', [
+            'current_menu' => 'show_activite',
+            'activity' => $activitesRepository->find($id)
         ]);
     }
 

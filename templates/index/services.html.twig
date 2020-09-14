@@ -18,7 +18,7 @@
                             <h5 class="card-title text-center">{{ service.title }}</h5>
                             <div class="card-footer mb-0">
                                 <div class="d-flex justify-content-end">
-                                    <a href="#" class="btn btn-outline-success shadow">En Savoir plus</a>
+                                    <a href="{{ path('show_service.html.twig', {'id': service.id}) }}" class="btn btn-outline-success shadow">En Savoir plus</a>
                                 </div>
 
                             </div>

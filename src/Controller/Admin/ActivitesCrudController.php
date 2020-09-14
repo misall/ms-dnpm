@@ -23,6 +23,7 @@ class ActivitesCrudController extends AbstractCrudController
         return [
             IntegerField::new('id', 'ID')->onlyOnIndex(),
             TextField::new('title', 'Titre de l\'activite'),
+            TextField::new('slug', 'Slug'),
             TextField::new('lieu', 'Lieu'),
             DateField::new('startedAt', 'Date debut'),
             DateField::new('endAt', 'Date Fin'),

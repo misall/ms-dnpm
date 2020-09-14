@@ -21,7 +21,7 @@
                             <div class="card-body">
                                 <p class="card-text">{{ activite.description | markdown }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
-                                        <button type="button" class="btn btn-sm btn-outline-primary">Voir les details</button>
+                                        <a href="{{ path('show_activity', {'id': activite.id })}}" type="button" class="btn btn-sm btn-outline-success">Voir les details</a>
                                     <small class="text-muted">{{ activite.startedAt | ago }}</small>
                                 </div>
                             </div>
